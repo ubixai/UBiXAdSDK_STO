@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name        = 'UBiXMerakSDK-STO'
-  s.version     = '2.12.1.1004'
+  s.version     = '2.12.1.1101'
   s.license     = 'MIT'
   s.authors     = {'ubixai' => 'pub.dev@ubixai.com'}
   s.homepage    = 'https://github.com/ubixai/UBiXAdSDK_STO'
@@ -11,8 +11,7 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 1.0'
   s.frameworks  = 'Accelerate', 'AdSupport', 'AppTrackingTransparency', 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreLocation', 'CoreMedia', 'CoreMotion', 'CoreTelephony', 'Foundation', 'ImageIO', 'QuartzCore', 'SafariServices', 'Security', 'StoreKit', 'SystemConfiguration', 'UIKit', 'WebKit'
   s.libraries   = ["z", "sqlite3"]
-  s.pod_target_xcconfig    = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'OTHER_LDFLAGS' => '-lObjC'}
-  s.user_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig    = { 'OTHER_LDFLAGS' => '$(inherited) -ObjC'}
   s.ios.vendored_framework = 'UbiXAdSDK.xcframework'
   s.dependency 'UBiXDaq', '~> 2.8.1'
   # s.resources   = ['Images/*.png', 'Sounds/*']
